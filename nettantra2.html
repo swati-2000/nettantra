@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #form{
+            background-color: lightblue;
+            padding: 2rem 3rem;
+            color: blue;
+            font-size:17px;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate(){
+            var hsc=document.form.hsc;
+            var hsc_percentage=document.form.hsc_percentage;
+            var ssc=document.form.ssc;
+            var ssc_percentage=document.form.ssc_percentage;
+
+            var currently_pursuing=document.form.currently_pursuing;
+            var current_educational_institution_name=document.form.current_educational_institution_name;
+            var overall_percentage=document.form.overall_percentage;
+            if(hsc.value.length<=0){
+                alert("HSC Instituation name is required");
+                hsc.focus();
+                return false;
+            }
+            if(hsc_percentage.value.length<=0){
+                alert("HSC percentage  is required");
+                hsc_percentage.focus();
+                return false;
+            }
+            if(ssc.value.length<=0){
+                alert("SSC Instituation name is required");
+                ssc.focus();
+                return false;
+            }
+            if(ssc_percentage.value.length<=0){
+                alert("SSC percentage  is required");
+                ssc_percentage.focus();
+                return false;
+            }
+            if(currently_pursuing.value.length<=0){
+                alert("Currently pursuing is required");
+                currently_pursuing.focus();
+                return false;
+            }
+            if(current_educational_institution_name.value.length<=0){
+                alert("Current educational institution name is required");
+                current_educational_institution_name.focus();
+                return false;
+            }
+            if(overall_percentage.value.length<=0){
+                alert("Overall percentage is required");
+                overall_percentage.focus();
+                return false;
+            }
+            return(true);
+        }
+        function validateString(id){
+          var element=document.getElementById(id);
+          var regExp=/^[a-zA-Z ]+$/;
+         
+          if(!regExp.test(element.value)){
+              alert("Enter string value.");
+              element.style.border="2px solid red";
+              element.focus();
+              return false;
+          }
+          element.style.border="2px solid green";
+      }
+      function validatepercent(id){
+          var x = parseFloat(str);
+          if(isNaN(X)){
+              alert("Enter a number.");
+              element.style.border="2px solid red";
+              element.focus();
+              return false;
+          }
+          element.style.border="2px solid green";
+          if(X.value <=0 || x.value >=100){
+              alert("Enter the number is greater then 0.");
+              element.style.border="2px solid red";
+              element.focus();
+              return false;
+          }
+      
+          element.style.border="2px solid green";
+        }
+      function validateString(id){
+          var element=document.getElementById(id);
+          var regExp=/^[a-zA-Z ]+$/;
+         
+          if(!regExp.test(element.value)){
+              alert("Enter string value.");
+              element.style.border="2px solid red";
+              element.focus();
+              return false;
+          }
+          element.style.border="2px solid green";
+      }
+      function validatepercent(id){
+          var x = parseFloat(str);
+          if(isNaN(X)){
+              alert("Enter a number.");
+              element.style.border="2px solid red";
+              element.focus();
+              return false;
+          }
+          element.style.border="2px solid green";
+          if(X.value <=0 || x.value >=100){
+              alert("Enter the number is greater then 0.");
+              element.style.border="2px solid red";
+              element.focus();
+              return false;
+          }
+      
+          element.style.border="2px solid green";
+        }
+      function validateString(id){
+          var element=document.getElementById(id);
+          var regExp=/^[a-zA-Z ]+$/;
+         
+          if(!regExp.test(element.value)){
+              alert("Enter string value.");
+              element.style.border="2px solid red";
+              element.focus();
+              return false;
+          }
+          element.style.border="2px solid green";
+      }
+      function validateString(id){
+          var element=document.getElementById(id);
+          var regExp=/^[a-zA-Z ]+$/;
+         
+          if(!regExp.test(element.value)){
+              alert("Enter string value.");
+              element.style.border="2px solid red";
+              element.focus();
+              return false;
+          }
+          element.style.border="2px solid green";
+      }
+      function validatepercent(id){
+          var x = parseFloat(str);
+          if(isNaN(X)){
+              alert("Enter a number.");
+              element.style.border="2px solid red";
+              element.focus();
+              return false;
+          }
+          element.style.border="2px solid green";
+          if(X.value <=0 || x.value >=100){
+              alert("Enter the number is greater then 0.");
+              element.style.border="2px solid red";
+              element.focus();
+              return false;
+          }
+      
+          element.style.border="2px solid green";
+        }
+    </script>
+</head>
+<body>
+    <form method="" action="" name="form" id="form" onsubmit="return validate()" >
+        <table align="center">
+        <tr>
+            <td>HSC Instituation name<span>*</span><br>
+                <input type="text" name="hsc" placeholder="HSC Instituation name" id="hsc" onblur="validateString(this.id)"></td>   
+        </tr>
+        <tr>
+            <td>HSC Board<span>*</span><br>
+                CBSC<input  type="radio" name="board" >
+                ICSC<input  type="radio" name="board" >
+                State board<input  type="radio" name="board" ></td>
+        </tr>
+        <tr>
+            <td>Score in HSC in percentage<span>*</span><br>
+                <input type="number" name="hsc_percentage" id="hsc_percentage" onblur="validatepercent(this.id)"></td>
+        </tr>
+        <tr>
+            <td>SSC Instituation name<span>*</span><br>
+                <input type="text" name="ssc" placeholder="SSC Instituation name"id="ssc" onblur="validateString(this.id)"></td>
+        </tr>
+        <tr>
+            <td>SSC Board<span>*</span><br>
+                CBSC<input  type="radio" name="board" >
+                ICSC<input  type="radio" name="board" >
+                State board<input  type="radio" name="board" ></td>
+        </tr>
+        <tr>
+            <td>Score in SSC in percentage<span>*</span><br>
+                <input type="number" name="ssc_percentage" id="ssc_percentage" onblur="validatepercent(this.id)"></td>
+        </tr>
+        <tr>
+            <td>Currently pursuing<span>*</span><br>
+                <input type="text" name="currently_pursuing" placeholder="Currently pursuing"id="currently_pursuing" onblur="validateString(this.id)"></td>
+        </tr>
+        <tr>
+            <td>Current educational institution name<span>*</span><br>
+                <input type="text" name="current_educational_institution_name" placeholder="Current educational institution name"id="current_educational_institution_name" onblur="validateString(this.id)"></td>
+        </tr>
+        <tr>
+            <td>Overall percentage<span>*</span><br>
+                <input type="number" name="overall_percentage" id="overall_percentage" onblur="validatepercent(this.id)"></td>
+        </tr>
+        <tr>
+            <td>Current backlogs if any<span>*</span><br>
+                Yes<input  type="radio" name="yes" >
+                No<input  type="radio" name="no" ></td>
+        </tr>
+        <tr>
+            <td align="center"><input type="submit" name="submit" value="Submit">
+                <input type="reset" name="reset" value="Reset">
+                <button><a href="put1.html">previous</a></button>
+                <button><a href="nettantra3.html">next</a></button>
+            </td>
+        </tr>
+
+    </table>    
+    </form>
+</body>
+</html>
